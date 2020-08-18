@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.header-text{
+    font-family: Metal mania;
+    font-size: 3.2rem;
+}
+.nav-bar li a {
+    text-decoration: none;
+    
+}
