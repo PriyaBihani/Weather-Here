@@ -1,40 +1,57 @@
 <!--In this project we geolocate the user and log its weather information to user and also save in the database-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" integrity="sha256-WVsM3xrcqyuFNF3W1qtIKbHFsD0977nDQA8DCMp1zCw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js" integrity="sha256-2/3R3NV5zryj0fDjD3cDh+SNiWQ/TJiMVZzAo5FrhiU=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href ="./style.css">
+    <link rel="stylesheet" href="./styles.css" />
+
     <title>The Weather Here</title>
 </head>
-<body>
-        <header class = "header-container">
-                <div class = "header-text">The Weather Here</div>
-                <div > 
-                    <ul class = "nav-bar">
-                        <li><a href = "index.html"> check in</a></li>
-                        <li><a href ="viewcheckins.html" >view check ins</a></li>
-                    </ul>
-                </div>
-        </header>
-        
-        <div id = "details">
-                latitude :  <span id = 'latitude'> </span>&deg;<br>
-                longitude :  <span id = 'longitude'> </span>&deg;<br>
-                temperature : <span id = 'temp'></span>&deg;C<br>
-                summary : <span id = 'summary'></span><br>
-                concentration of particulate matter : <span id = 'aq_parameter'></span>&deg;<br>
-                value : <span id = 'aq_value'></span>&deg;<br>
-                units : <span id = 'aq_units'></span>
-                last updated : <span id = 'aq_date'></span>
-        </div>
-   
-    <button id ="check-in">check in</button>
 
-    <script src = "./index.js">
-    </script>
+<body>
+    <header class="header-container">
+        <div class="header-text">The Weather Here 🍁</div>
+        <nav>
+            <li><a href="index.html"> check in</a></li>
+            <li><a href="viewcheckins.html">view check ins</a></li>
+        </nav>
+        <button id="check-in">Check In📌</button>
+    </header>
+
+    <main>
+        <div class="weather__container">
+            <div id="units__toggle">
+                <button id="celsius" class="active">C</button>
+            </div>
+            <div id="weather__icon"></div>
+            <div class="box1">
+                <div class="box__left">
+                    <div id="location__name">
+                        <span id="latitude"> </span>&deg;<span id="longitude"> </span
+              >&deg;
+            </div>
+            <div id="weather__condition"><span id="summary"></span></div>
+                </div>
+                <div class="box__right">
+                    <div id="current__temperature"><span id="temp">&deg;C</span></div>
+                </div>
+            </div>
+
+            <div class="box2">
+                <span id="humidity">
+            <span id="aq_value"><span id="aq_parameter"></span></span>
+                µg/m3
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
 </body>
+
 </html>
