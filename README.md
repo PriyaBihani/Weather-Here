@@ -10,7 +10,7 @@ You can also save these details in nedb which is a database, basically a lighter
 
 You can always check your logs by hovering or clicking over the map markers.
 
-It is not styled yet but it does have smooth technical interface.
+It also has a clean and intuitive user interface.
 
 ### Steps to Run
 
