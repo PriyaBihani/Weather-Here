@@ -1,21 +1,275 @@
 @import url('https://fonts.googleapis.com/css?family=Metal+Mania&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.header-container{
+
+
+/* .header-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
     align-items: center;
-}
-.header-text{
-    font-family: Metal mania;
+} */
+
+.header-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    font-weight: 600;
     font-size: 3.2rem;
+    text-align: center;
+    margin: 50px;
 }
+
 .nav-bar li a {
     text-decoration: none;
-    
+}
+
+
+/* 
+ */
+
+html {
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 70%;
+    margin: 0px auto;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+header {
+    text-align: center;
+}
+
+header button {
+    background: #f1f1f1;
+    border: 1px solid #fff;
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.5s ease;
+    margin: 20px;
+}
+
+@media(max-width:700px) {
+    .weather__container {
+        transform: scale(0.9);
+    }
+    .header-text {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #111;
+        font-weight: 600;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 50px;
+    }
+}
+
+header button:hover {
+    background: #f1f1f142;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: #fdfdfd;
+    align-items: center;
+    transition: all 1s;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.weather__container {
+    width: 500px;
+    height: 230px;
+    background: #fff;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+}
+
+.weather__container #units__toggle {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    z-index: 10;
+}
+
+.weather__container #units__toggle #celsius,
+.weather__container #units__toggle #fahrenheit {
+    margin-right: 10px;
+    padding: 8px 11px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    border-radius: 100px;
+}
+
+.weather__container #units__toggle .active {
+    color: #fff;
+    background: #89d3c5 !important;
+    pointer-events: none;
+}
+
+.weather__container #weather__icon {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translate(0%, -50%);
+    width: 180px;
+    height: 180px;
+    background-image: url(https://cdn3.iconfinder.com/data/icons/weather-575/64/Sun-512.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.weather__container #weather__icon svg {
+    width: 100%;
+    overflow: visible;
+}
+
+.weather__container #weather__icon #clear-sky,
+.weather__container #weather__icon #rain,
+.weather__container #weather__icon #snow,
+.weather__container #weather__icon #thunderstorm,
+.weather__container #weather__icon #mist,
+.weather__container #weather__icon #broken-clouds {
+    opacity: 0;
+}
+
+.weather__container #weather__icon .show {
+    opacity: 1;
+}
+
+.weather__container .box1 {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(0%, -50%);
+    width: 70%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.weather__container .box1 #location__name {
+    color: #555555;
+    font-size: 1.8rem;
+}
+
+.weather__container .box1 #current__temperature {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0%, -50%);
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.weather__container .box2 {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translate(0%, -50%);
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather__container .box2 #minmax__temperature {
+    margin-left: 30px;
+    position: relative;
+}
+
+.weather__container .box2 #minmax__temperature::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -40px;
+    display: block;
+    background-image: url(https://i.postimg.cc/Dzj4ZhFv/temp.png);
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.weather__container .box2 #humidity {
+    position: relative;
+}
+
+.weather__container .box2 #humidity::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -40px;
+    display: block;
+    background-image: url(https://cdn.iconscout.com/icon/premium/png-512-thumb/virus-in-air-2061255-1744815.png);
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+}
+
+.search__input {
+    width: 500px;
+    margin-top: 100px;
+}
+
+#CheckInMap {
+    height: 50vh;
+    width: 95%;
+    margin: 0px auto;
+    border-radius: 20px;
+}
+
+.search__input form#city__form {
+    width: 100%;
+    text-align: center;
+}
+
+.search__input form#city__form .form__group input#city {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    color: #8b8b8b;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.search__input form#city__form .notfound__text {
+    display: none;
 }
