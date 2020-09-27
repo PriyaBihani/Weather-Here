@@ -1,4 +1,7 @@
 # Weather-Here
+
+### Working URL : https://elastic-swartz-66f577.netlify.app
+
 It is an awesome app which will access your location using your browser's navigator. And with the help of your latitude and longitude, it will give you the information about your surroundings like the temperature, weather, humidity etc. You can also store all the locations and weather information in a map and can see later anytime you want.
 
 You have to enable geolocation in your browser for this to work. Ofcourse, it will ask for permission. 
@@ -8,3 +11,8 @@ You can also save these details in nedb which is a database, basically a lighter
 You can always check your logs by hovering or clicking over the map markers.
 
 It is not styled yet but it does have smooth technical interface.
+
+### Steps to Run
+
+1) npm install
+2) node server.js
